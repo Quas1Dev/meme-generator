@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Karla";
+  src: url(./fonts/Karla-Italic-VariableFont_wght.ttf),
+       url(./fonts/Karla-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Karla';
+}
+
+#pg-header{
+  /* Header background */
+  height: 65px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #FFFFFF;
+  padding: 0 30px;
+}
+
+#site-logo{
+  width: 31px;
+  margin-right: 6px;
+}
+
+#site-title{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-right: auto;
+}
