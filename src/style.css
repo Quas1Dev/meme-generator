@@ -12,6 +12,7 @@
 
 body{
   font-family: 'Karla';
+  --purple-grad: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
 }
 
 #pg-header{
@@ -19,7 +20,7 @@ body{
   height: 65px;
   left: 0px;
   top: 0px;
-  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  background: var(--purple-grad);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -38,4 +39,44 @@ body{
   font-size: 20px;
   line-height: 24px;
   margin-right: auto;
+}
+
+#site-details{
+  font-size: 12px;
+}
+
+#generator {
+   margin: 0 36px;
+}
+
+#generator .memeController fieldset{
+  display: flex;
+  gap: 17px;
+  border: none;
+  Width: 477px;
+  Height: 40px;
+  margin: 15px auto;
+}
+
+#generator .memeController fieldset input{
+  padding: 10px;
+  border: 1px solid #D5D4D8;
+  border-radius: 5px;
+}
+
+#generator .memeController .topPhrase{
+  margin-right: auto;
+}
+
+#generator .memeController button{
+  display: block;
+  background: var(--purple-grad);
+  border: none;
+  Width: 477px;
+  Height: 40px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
 }

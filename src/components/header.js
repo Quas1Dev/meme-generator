@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header id="pg-header">
       <img src={logo} id="site-logo"/>
-      <h1 id="site-title"> Meme Generator </h1>
+      <h2 id="site-title"> Meme Generator </h2>
       <span id="site-details"> React Course - Project 3 </span>
     </header>
   )
