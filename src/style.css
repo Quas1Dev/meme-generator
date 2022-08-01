@@ -45,38 +45,36 @@ body{
   font-size: 12px;
 }
 
-#generator {
-   margin: 0 36px;
+.memeGenContainer{
+  max-width: 463px;
+  margin: 36px auto;
 }
 
-#generator .memeController fieldset{
-  display: flex;
-  gap: 17px;
-  border: none;
-  Width: 477px;
-  Height: 40px;
-  margin: 15px auto;
+.form {
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+
 }
 
-#generator .memeController fieldset input{
-  padding: 10px;
-  border: 1px solid #D5D4D8;
-  border-radius: 5px;
+.form--input {
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
 }
 
-#generator .memeController .topPhrase{
-  margin-right: auto;
+.form--button {
+    grid-column: 1 / -1;
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-#generator .memeController button{
-  display: block;
-  background: var(--purple-grad);
-  border: none;
-  Width: 477px;
-  Height: 40px;
-  margin: 0 auto;
-  font-weight: 700;
-  font-size: 16px;
-  color: #FFFFFF;
-  cursor: pointer;
+.memeContainer--memeImg{
+  width: 100%;
+  margin-top: 36px;
 }
