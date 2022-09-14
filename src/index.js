@@ -9,3 +9,5 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// StrictMode triggers extra rendering

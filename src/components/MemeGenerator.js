@@ -11,15 +11,26 @@ export default function MemeGeneral() {
     randomImage: "http://i.imgflip.com/1bij.jpg"
   })
 
-  const [allMemeImages, setAllMemeImages] = React.useState(Data)
+  const [allMemeImages, setAllMemeImages] = React.useState([])
 
+  console.log('hello')
+
+  // Handle a side effect*.
+  // In this case it is a API fetch. We only make the fetch the first time
+  // our component is rendered.
+  React.useEffect(()=>{
+    console.log('Inside effect')
+    fetch("https://api.imgflip.com/get_memes")
+    .then(res => res.json())
+    .then(data => setAllMemeImages(data.data.memes))
+  },[])
+  
   // Our function to set the new state with the new image and texts for
   // our meme
   function getImage(){
     // Stores the array of memes in memesArray
-    let memesArray = allMemeImages.data.memes
-    let randIndex = Math.floor(Math.random() * memesArray.length)
-    let object = memesArray[randIndex]
+    let randIndex = Math.floor(Math.random() * allMemeImages.length)
+    let object = allMemeImages[randIndex]
 
     setMeme(prevMeme => {
       return {
@@ -32,7 +43,6 @@ export default function MemeGeneral() {
   // Modify top and bottom text related state
   function handleChange(e){
     let {name, value} = e.target
-    console.log("Hello")
     setMeme(prevMeme => ({
       ...prevMeme,
       [name]: value
