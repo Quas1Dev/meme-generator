@@ -74,7 +74,44 @@ body{
     cursor: pointer;
 }
 
-.memeContainer--memeImg{
+.meme_container{
+  position: relative;
+  margin-top: 30px;
+}
+
+.meme_container--meme_img {
   width: 100%;
-  margin-top: 36px;
+}
+
+.meme_container--top_text,
+.meme_container--bottom_text{
+  position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+.meme_container--top_text {
+  top: 0;
+}
+
+.meme_container--bottom_text {
+  bottom: 0;
 }

@@ -15,7 +15,7 @@ export default function MemeGeneral() {
 
   // Our function to set the new state with the new image and texts for
   // our meme
-  function getImage(topText, bottomText){
+  function getImage(){
     // Stores the array of memes in memesArray
     let memesArray = allMemeImages.data.memes
     let randIndex = Math.floor(Math.random() * memesArray.length)
@@ -29,6 +29,16 @@ export default function MemeGeneral() {
     })
   }
 
+  // Modify top and bottom text related state
+  function handleChange(e){
+    let {name, value} = e.target
+    console.log("Hello")
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      [name]: value
+    }))
+  }
+
   return (
     <main className="memeGenContainer">
             <div className="form">
@@ -36,19 +46,25 @@ export default function MemeGeneral() {
                     type="text"
                     placeholder="Top text"
                     className="form--input"
+                    value={meme.topText}
+                    name="topText"
+                    onChange={handleChange}
                 />
                 <input
                     type="text"
                     placeholder="Bottom text"
                     className="form--input"
+                    value = {meme.bottomText}
+                    name="bottomText"
+                    onChange={handleChange}
                 />
                 <button
                     className="form--button"
-                onClick={getImage}>
+                    onClick={getImage}>
                     Get a new meme image 🖼
                 </button>
             </div>
-      <Meme img={meme.randomImage}/>
+      <Meme {...meme} />
     </main>
   )
 }
