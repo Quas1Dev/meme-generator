@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Meme generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a small project created only for testing React by consuming an API and using it to provide some functionality for the user. 
 
-## Available Scripts
+## Description
+This project is a web application named Meme Generator. Users can create memes by adding text to an image we get from a thirdy-part service through an API. 
 
-In the project directory, you can run:
+## Stack and tools
+* [React](https://reactjs.org/)
+* [Figma](https://www.figma.com/)
 
-### `npm start`
+## Getting Started
+Here we teach you how you can get up and running with Meme Generator.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
+- You'll need to have [Node.js](https://nodejs.org/en/) intalled on your machine.
+- You'll need to have [Git](https://git-scm.com/) installed installed on your machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Step-by-step
+Cloning the app:
+- Open a command-line shell (e.g., CMD, Powershell, etc.). Let
+- Navigate to the place where you want to place the project in your file system. The way to navigate will depend on the command-line shell you are using, so Google it to find out what you should do.
+- Clone this repository using a command like `git clone https://github.com/Quas1Dev/meme-generator.git memegenerator`. In this case, we are setting the name for the folder to where we are cloning our project "memegenerator".
+- Navigate to the folder where you cloned the meme generator. 
 
-### `npm test`
+## Setting up the project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To quickly set up the project and try out our web app, you can download our [setup.bat](https://www.dropbox.com/s/bkvslejpzvp2u2c/setup.bat?dl=0) file. This Batch script will clone the project into a findyourduo folder in your Documents directory, install all dependencies for the web app, server, and mobile app, prepare a PostgreSQL database with the necessary tables, populate them with some data, and initiate the web app and server. 
 
-### `npm run build`
+To use the setup.bat file, simply double click on it and follow the prompts. You'll be asked to enter your PostgreSQL superuser password and the location of your PostgreSQL data directory (default is C:\Program Files\PostgreSQL\15\data). The script will handle the rest. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We'll provide instructions to run the mobile app in just a moment.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting to use the web app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+With both the web app and server running, open any browser you want and navigate to localhost:3000. At this point you should be seing the home page for the application.
 
-### `npm run eject`
+## Closing everything and getting back
+Once you are done, you can just close all windows opened by the script. All runing process that we started during the setup will be terminated. If you want to run them again, just execute our setup.bat file again.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Running the mobile app
+Navigate to the project's folder using CMD, and then run the follwoing:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To start the server:
+```
+cd server
+npm run dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To start the mobile application:
+```
+cd ../mobile
+npm start
+```
+Note that a QR code will appear on screen for you.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In your smartphone, open up ExpoGO, and click on Scan QR code. Aim the camera at the QR code, and it should start the connection. Now you can enjoy your React Native app.
