@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     "success": true,
     "data": {
@@ -805,3 +806,11 @@ export default {
         ]
     }
 }
+
+/*
+Dev's comments
+
+Notice we are exporting an unamed object. ESlint, when configured in the text 
+editor, tries to warn us of this. The line eslint-disable-next-line 
+import/no-anonymous-default-export turn this warning off.
+*/

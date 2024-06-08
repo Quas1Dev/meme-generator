@@ -1,5 +1,5 @@
 import Meme from "./meme.js"
-import Data from "./data.js"
+// import Data from "./data.js"
 import React from "react"
 
 export default function MemeGeneral() {
@@ -11,9 +11,8 @@ export default function MemeGeneral() {
     randomImage: "http://i.imgflip.com/1bij.jpg"
   })
 
+  // A complete list of memes to use.  
   const [allMemeImages, setAllMemeImages] = React.useState([])
-
-  console.log('hello')
 
   // Handle a side effect*.
   // In this case it is a API fetch. We only make the fetch the first time
@@ -24,7 +23,7 @@ export default function MemeGeneral() {
     .then(res => res.json())
     .then(data => setAllMemeImages(data.data.memes))
   },[])
-  
+
   // Our function to set the new state with the new image and texts for
   // our meme
   function getImage(){

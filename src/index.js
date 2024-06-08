@@ -10,4 +10,7 @@ root.render(
   </React.StrictMode>
 );
 
-// StrictMode triggers extra rendering
+/*
+Dev's comments 
+StrictMode triggers extra rendering
+*/ 
